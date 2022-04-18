@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-// import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { getArticles } from "./apiCalls"
 import AbstractSection from "./Components/AbstractSection"
 import './css_reset.css';
@@ -15,8 +15,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Daily Drive</h1>
-      <AbstractSection articles={articles}/>
+      <header>
+        <h1>Daily Drive</h1>
+      </header>
+      <Routes>
+        <Route exact path="/" element={<AbstractSection articles={articles}/>}/>
+      </Routes>
     </div>
   );
 }

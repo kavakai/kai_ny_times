@@ -2,10 +2,9 @@ import React from "react";
 import Abstract from "./Abstract";
 
 function AbstractSection({ articles }) {
-  console.log(articles, "articles in section")
 
   const abstracts = articles.map(article => {
-    <Abstract
+    return <Abstract
       key={Date.now()}
       id={Date.now()}
       title={article.title}
