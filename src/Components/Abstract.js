@@ -1,11 +1,16 @@
 import React from "react";
+import "./Abstract.css"
 
-function Abstract({id, title, image, alt}) {
+function Abstract({id, title, image, alt, date, showInfo}) {
 
   return (
-    <div>
+    <div className="article_card" onClick={() => showInfo(id)}>
       <img src={image} alt={alt}/>
-      <h2>{title}</h2>
+      <p>{title}</p>
+      <br/>
+      <p>{date.substring(0, 10)}</p>
+      <br/>
+      <p>{date.replace(/^[^:]*([0-2]\d:[0-5]\d).*$/, "$1")}</p>
     </div>
   )
 } 
