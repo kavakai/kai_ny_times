@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 // import { Route, Switch, Redirect } from 'react-router-dom';
-import {getArticles} from "./apiCalls"
+import { getArticles } from "./apiCalls"
+import AbstractSection from "./Components/AbstractSection"
 import './App.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>Daily Feed</h1>
-      <AbstractSection />
+      <AbstractSection articles={articles}/>
     </div>
   );
 }
