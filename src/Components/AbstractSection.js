@@ -2,7 +2,7 @@ import React from "react";
 import Abstract from "./Abstract";
 import "./AbstractSection.css"
 
-function AbstractSection({ articles }) {
+function AbstractSection({ articles, showInfo }) {
 
   const abstracts = articles.map(article => {
 
@@ -13,6 +13,7 @@ function AbstractSection({ articles }) {
       image={article.multimedia ? article.multimedia[2].url : null}
       alt={article.multimedia ? article.multimedia[2].caption : article.title}
       date={article.updated_date}
+      showInfo={showInfo}
     />
   })
 

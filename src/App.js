@@ -12,7 +12,11 @@ function App() {
   useEffect(() => {
     getArticles()
       .then(data => setArticles(data.results))
-}, [])
+  }, [])
+  
+  const showInfo = (id) => {
+    
+  }
 
   return (
     <div className="App">
@@ -20,7 +24,7 @@ function App() {
         <h1>Daily Drive</h1>
       </header>
       <Routes>
-        <Route exact path="/" element={<AbstractSection articles={articles}/>}/>
+        <Route exact path="/" element={<AbstractSection articles={articles} showInfo={showInfo}/>}/>
       </Routes>
     </div>
   );
