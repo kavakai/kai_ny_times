@@ -2,7 +2,8 @@ import React, { useState, useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { getArticles } from "./apiCalls"
 import AbstractSection from "./Components/AbstractSection"
-import './css_reset.css';
+import "./css_reset.css";
+import "./App.css"
 
 function App() {
 
