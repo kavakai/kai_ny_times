@@ -2,16 +2,15 @@ import React from "react";
 import Abstract from "./Abstract";
 
 function AbstractSection({ articles }) {
-  console.log(articles, "in section")
+  console.log(articles, "articles in section")
 
   const abstracts = articles.map(article => {
     <Abstract
       key={Date.now()}
       id={Date.now()}
-      section={article.section}
       title={article.title}
-      abstract={article.abstract}
-      image={article.multimedia[2].url}
+      image={article.multimedia ? article.multimedia[2].url : null}
+      alt={article.multimedia ? article.multimedia[2].caption: null}
     />
   })
 

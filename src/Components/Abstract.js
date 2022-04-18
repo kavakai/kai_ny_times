@@ -1,12 +1,11 @@
 import React from "react";
 
-function Abstract({id, section, title, abstract, image}) {
+function Abstract({id, title, image, alt}) {
 
   return (
     <div>
-      <img src={image} />
+      <img src={image} alt={alt}/>
       <h2>{title}</h2>
-      <p>{abstract}</p>
     </div>
   )
 } 
