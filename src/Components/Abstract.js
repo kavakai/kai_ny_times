@@ -5,7 +5,8 @@ function Abstract({id, title, image, alt, date, showInfo}) {
 
   return (
     <div className="article_card" onClick={() => showInfo(id)}>
-      <img src={image} alt={alt}/>
+      <img src={image} alt={alt} />
+      <br/>
       <p>{title}</p>
       <br/>
       <p>{date.substring(0, 10)}</p>
