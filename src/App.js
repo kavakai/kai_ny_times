@@ -18,7 +18,6 @@ function App() {
   
   const showInfo = (id) => {
     const article = articles.find(article => article.title === id)
-    console.log(article, "single")
     setSingleArticle(article)
     navigate(`${id}`)
   }

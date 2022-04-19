@@ -5,7 +5,6 @@ import "./AbstractSection.css"
 function AbstractSection({ articles, showInfo }) {
 
   const abstracts = articles.map(article => {
-    console.log(article, "art")
     return <Abstract
       key={article.title}
       id={article.title}

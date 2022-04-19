@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ArticleView.css"
 
 function ArticleView({ singleArticle }) {
   return (
-    <div>
+    <section className="single_view">
       <img src={singleArticle.multimedia ? singleArticle.multimedia[1].url : singleArticle.title} />
-      <h2>Title: {singleArticle.title}</h2>
-      <h3>{singleArticle.byline }</h3>
+      <br/>
+      <h2>{singleArticle.title}</h2>
+      <h3>{singleArticle.byline}</h3>
+      <br/>
       <p>Abstract: {singleArticle.abstract}</p>
+      <br/>
       <p>Published: {singleArticle.published_date.substring(0, 10)}</p>
+      <br/>
       <a href={singleArticle.url}>Full Article</a>
       <Link to="/">Home</Link>
-
-
-    </div>
+    </section>
   )
 } 
 
