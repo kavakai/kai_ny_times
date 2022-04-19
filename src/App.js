@@ -23,12 +23,18 @@ function App() {
     navigate(`${id}`)
   }
 
+  const filterArticles = () => {
+    return articles.filter(article => {
+
+    })
+  }
+
   return (
     <div className="App">
       <header>
         <h1>Welcome To The Daily Drive</h1>
       </header>
-      { window.location.pathname === "/" && <Search />}
+      {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
         <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} />} />
         <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
