@@ -3,9 +3,17 @@ import Search from "./Search";
 import Abstract from "./Abstract";
 import "./AbstractSection.css"
 
-function AbstractSection({ articles, showInfo }) {
+function AbstractSection({ articles, showInfo, filteredArticles }) {
 
-  const abstracts = articles.map(article => {
+  let display
+
+  if (filteredArticles.length) {
+    display = filteredArticles
+  } else {
+    display = articles
+  }
+
+  const abstracts = display.map(article => {
     return <Abstract
       key={article.title}
       id={article.title}

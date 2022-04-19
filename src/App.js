@@ -11,6 +11,7 @@ function App() {
   let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [singleArticle, setSingleArticle] = useState({})
+  const [filteredArticles, setFilteredArticles] = useState([])
 
   useEffect(() => {
     getArticles()
@@ -23,10 +24,11 @@ function App() {
     navigate(`${id}`)
   }
 
-  const filterArticles = () => {
-    return articles.filter(article => {
-
+  const filterArticles = (keyword) => {
+    const filtered = articles.filter(article => {
+      return article.abstract.includes(keyword)
     })
+    setFilteredArticles(filtered)
   }
 
   return (
@@ -36,7 +38,7 @@ function App() {
       </header>
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
-        <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} />} />
+        <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles}/>} />
         <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
       </Routes>
     </div>

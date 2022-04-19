@@ -20,7 +20,7 @@ const Search = ({ filterArticles }) => {
         value={inputPhrase}
         onChange={(event) => handleChange(event)}
       />
-      <button className="search-input" type="submit">Submit</button>
+      {/* <button className="search-input" type="submit">Submit</button> */}
     </form>
   )
 }
