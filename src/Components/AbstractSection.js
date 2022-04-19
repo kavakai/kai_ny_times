@@ -5,10 +5,10 @@ import "./AbstractSection.css"
 function AbstractSection({ articles, showInfo }) {
 
   const abstracts = articles.map(article => {
-
+    console.log(article, "art")
     return <Abstract
-      key={Date.now()}
-      id={Date.now()}
+      key={article.title}
+      id={article.title}
       title={article.title}
       image={article.multimedia ? article.multimedia[2].url : null}
       alt={article.multimedia ? article.multimedia[2].caption : article.title}

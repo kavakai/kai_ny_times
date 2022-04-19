@@ -17,7 +17,8 @@ function App() {
   }, [])
   
   const showInfo = (id) => {
-    const article = articles.find(article => article.id === id)
+    const article = articles.find(article => article.title === id)
+    console.log(article, "single")
     setSingleArticle(article)
     navigate(`${id}`)
   }
@@ -29,7 +30,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} />} />
-        <Route path=":id" element={<ArticleView />}/>
+        <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
       </Routes>
     </div>
   );
