@@ -14,8 +14,8 @@ function ArticleView({ singleArticle }) {
       <br/>
       <p>Published: {singleArticle.published_date.substring(0, 10)}</p>
       <br/>
-      <a href={singleArticle.url}>Full Article</a>
-      <Link to="/">Home</Link>
+      <a className="link" href={singleArticle.url}>Full Article Here</a>
+      <Link className="link" to="/">Return Home</Link>
     </section>
   )
 } 

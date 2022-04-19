@@ -5,6 +5,7 @@ import AbstractSection from "./Components/AbstractSection"
 import ArticleView from './Components/ArticleView';
 import "./css_reset.css";
 import "./App.css"
+import Search from './Components/Search';
 
 function App() {
   let navigate = useNavigate()
@@ -25,8 +26,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Daily Drive</h1>
+        <h1>Welcome To The Daily Drive</h1>
       </header>
+      { window.location.pathname === "/" && <Search />}
       <Routes>
         <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} />} />
         <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>

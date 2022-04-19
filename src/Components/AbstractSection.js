@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "./Search";
 import Abstract from "./Abstract";
 import "./AbstractSection.css"
 
@@ -12,6 +13,7 @@ function AbstractSection({ articles, showInfo }) {
       image={article.multimedia ? article.multimedia[2].url : null}
       alt={article.multimedia ? article.multimedia[2].caption : article.title}
       date={article.updated_date}
+      author={article.byline}
       showInfo={showInfo}
     />
   })
@@ -19,6 +21,7 @@ function AbstractSection({ articles, showInfo }) {
 
   return (
     <div className="article_container">
+      {/* <Search /> */}
       {abstracts}
     </div>
   )

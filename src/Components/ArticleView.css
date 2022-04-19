@@ -4,3 +4,13 @@
   width: 100%;
   align-items: center;
 }
+
+.link {
+  text-decoration: none;
+  color: #0412d8;
+  font-size: x-large;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
