@@ -13,13 +13,17 @@ const Search = ({ filterArticles }) => {
 
   return (
     <form className="search-form">
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Enter Keyword"
-        value={inputPhrase}
-        onChange={(event) => handleChange(event)}
-      />
+      <div className="inputs">
+        <label className="search-label">Filter by Keyword:</label>
+        <input
+          className="search-input"
+          name="search"
+          type="text"
+          placeholder="Enter Keyword"
+          value={inputPhrase}
+          onChange={(event) => handleChange(event)}
+        />
+      </div>
       {/* <button className="search-input" type="submit">Submit</button> */}
     </form>
   )

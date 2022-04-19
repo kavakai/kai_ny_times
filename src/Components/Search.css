@@ -3,3 +3,16 @@
   justify-content: center;
   margin-bottom: 30px;
 }
+
+.search-input {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.inputs {
+  display: flex;
+  width: 23%;
+  justify-content: space-evenly;
+  align-items: center;
+}
