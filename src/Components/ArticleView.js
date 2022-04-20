@@ -5,16 +5,16 @@ import "./ArticleView.css"
 function ArticleView({ singleArticle }) {
   return (
     <section className="single_view">
-      <img src={singleArticle.multimedia ? singleArticle.multimedia[1].url : singleArticle.title} />
+      <img src={singleArticle.multimedia && singleArticle.multimedia[1].url} />
       <br/>
-      <h2>{singleArticle.title}</h2>
-      <h3>{singleArticle.byline}</h3>
+      <h2>{singleArticle.title && singleArticle.title}</h2>
+      <h3>{singleArticle.byline && singleArticle.byline}</h3>
       <br/>
-      <p>Abstract: {singleArticle.abstract}</p>
+      <p>Abstract: {singleArticle.abstract && singleArticle.abstract}</p>
       <br/>
-      <p>Published: {singleArticle.published_date.substring(0, 10)}</p>
+      <p>Published: {singleArticle.published_date && singleArticle.published_date.substring(0, 10)}</p>
       <br/>
-      <a className="link" href={singleArticle.url}>Full Article Here</a>
+      {singleArticle.url && <a className="link" href={singleArticle.url}>Full Article Here</a>}
       <Link className="link" to="/">Return Home</Link>
     </section>
   )
