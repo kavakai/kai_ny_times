@@ -1,11 +1,12 @@
 import React from "react";
 import "./Abstract.css"
 
-function Abstract({id, title, image, alt, date, showInfo, author}) {
+function Abstract({ id, title, image, alt, date, showInfo, author }) {
+  console.log(alt, "alt")
 
   return (
     <div className="article_card" onClick={() => showInfo(id)}>
-      <img src={image} alt={alt} />
+      {image && <img src={image} alt={alt} />}
       <br/>
       <p>{title}</p>
       <br />
