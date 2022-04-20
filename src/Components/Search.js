@@ -14,7 +14,7 @@ const Search = ({ filterArticles }) => {
   return (
     <form className="search-form">
       <div className="inputs">
-        <label className="search-label">Filter by Keyword:</label>
+        <label className="search-label">Filter Titles by Keyword:</label>
         <input
           className="search-input"
           name="search"

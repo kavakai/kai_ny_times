@@ -16,3 +16,7 @@ html {
   font-size: xx-large;
   margin: 10% 39%;
 }
+
+.title {
+  text-shadow: #f9ead7 3px 4px 9px;
+}

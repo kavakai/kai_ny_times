@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Welcome To The Daily Drive</h1>
+        <h1 className="title">Welcome To The Daily Drive</h1>
       </header>
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>

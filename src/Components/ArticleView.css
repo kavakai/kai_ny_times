@@ -9,6 +9,9 @@
   text-decoration: none;
   color: #0412d8;
   font-size: x-large;
+  border: solid black 3px;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .link:hover {
