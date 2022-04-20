@@ -40,14 +40,24 @@ function App() {
     }
   }
 
+  const checkError = () => {
+    if (!errorMsg && !noArticles) {
+      return <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />
+    } else if (!errorMsg && noArticles) {
+      return <h2 className="no-articles">No Articles Found...</h2>
+    } else if (errorMsg) {
+      return <Error errorMsg={errorMsg} />
+    }
+  }
+
   return (
     <div className="App">
       <header>
         <h1 className="title">Welcome To The Daily Drive</h1>
       </header>
-      {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
+      {window.location.pathname === "/" && !errorMsg && <Search filterArticles={filterArticles}/>}
       <Routes>
-        <Route path="/" element={noArticles ? <h2 className="no-articles">No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
+        <Route path="/" element={checkError()} />
         <Route path="/article/:id" element={<ArticleView singleArticle={singleArticle} />} />
         <Route path="*" element={<Error errorMsg={errorMsg} />} />
       </Routes>
