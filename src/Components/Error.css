@@ -1,0 +1,9 @@
+.error-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error{
+  font-size: xx-large;
+}

@@ -25,7 +25,7 @@ function App() {
   const showInfo = (id) => {
     const article = articles.find(article => article.title === id)
     setSingleArticle(article)
-    navigate(`${id}`)
+    navigate(`/article/${id}`)
   }
 
   const filterArticles = (keyword) => {
@@ -48,8 +48,8 @@ function App() {
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
         <Route path="/" element={noArticles ? <h2 className="no-articles">No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
-        <Route path=":id" element={<ArticleView singleArticle={singleArticle} />} />
-        <Route to="*" element={<Error errorMsg={errorMsg} />} />
+        <Route path="/article/:id" element={<ArticleView singleArticle={singleArticle} />} />
+        <Route path="*" element={<Error errorMsg={errorMsg} />} />
       </Routes>
     </div>
   );
