@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from 'react';
-import {useNavigate, Route, Routes } from 'react-router-dom';
+import {useNavigate, Route, Routes, Redirect } from 'react-router-dom';
 import { getArticles } from "./apiCalls"
 import AbstractSection from "./Components/AbstractSection"
 import ArticleView from './Components/ArticleView';
 import "./css_reset.css";
 import "./App.css"
 import Search from './Components/Search';
+import Error from './Components/Error';
 
 function App() {
   let navigate = useNavigate()
@@ -13,10 +14,12 @@ function App() {
   const [singleArticle, setSingleArticle] = useState({})
   const [filteredArticles, setFilteredArticles] = useState([])
   const [noArticles, setNoArticles] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   useEffect(() => {
     getArticles()
       .then(data => setArticles(data.results))
+      .catch(err => setErrorMsg(err))
   }, [])
   
   const showInfo = (id) => {
@@ -45,7 +48,8 @@ function App() {
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
         <Route path="/" element={noArticles ? <h2 className="no-articles">No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
-        <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
+        <Route path=":id" element={<ArticleView singleArticle={singleArticle} />} />
+        <Route to="*" element={<Error errorMsg={errorMsg} />} />
       </Routes>
     </div>
   );

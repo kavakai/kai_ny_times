@@ -1,6 +1,6 @@
 
 export const getArticles = () => {
-  return fetch(`https://api.nytimes.com/svc/topstories/v2/automobiles.json?api-key=${process.env.REACT_APP_API_KEY}`)
+  return fetch(`https://api.nytimes.com/svc/topstories/v2/automobiles.jso?api-key=${process.env.REACT_APP_API_KEY}`)
     .then(resp => checkResponse(resp))
 }
 
