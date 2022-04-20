@@ -24,7 +24,6 @@ const Search = ({ filterArticles }) => {
           onChange={(event) => handleChange(event)}
         />
       </div>
-      {/* <button className="search-input" type="submit">Submit</button> */}
     </form>
   )
 }

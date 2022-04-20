@@ -6,13 +6,13 @@ import ArticleView from './Components/ArticleView';
 import "./css_reset.css";
 import "./App.css"
 import Search from './Components/Search';
-// require('dotenv').config()
 
 function App() {
   let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [singleArticle, setSingleArticle] = useState({})
   const [filteredArticles, setFilteredArticles] = useState([])
+  const [noArticles, setNoArticles] = useState(false)
 
   useEffect(() => {
     getArticles()
@@ -27,9 +27,14 @@ function App() {
 
   const filterArticles = (keyword) => {
     const filtered = articles.filter(article => {
-      return article.abstract.includes(keyword)
+      return article.title.match(keyword)
     })
-    setFilteredArticles(filtered)
+    if (filtered.length) {
+      setFilteredArticles(filtered)
+      setNoArticles(false)
+    } else {
+      setNoArticles(true)
+    }
   }
 
   return (
@@ -39,7 +44,7 @@ function App() {
       </header>
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
-        <Route path="/" element={<AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles}/>} />
+        <Route path="/" element={noArticles ? <h2>No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
         <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
       </Routes>
     </div>

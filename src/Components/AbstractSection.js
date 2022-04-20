@@ -3,7 +3,7 @@ import Search from "./Search";
 import Abstract from "./Abstract";
 import "./AbstractSection.css"
 
-function AbstractSection({ articles, showInfo, filteredArticles }) {
+function AbstractSection({ articles, showInfo, filteredArticles, noArticles }) {
 
   let display
 
@@ -29,8 +29,7 @@ function AbstractSection({ articles, showInfo, filteredArticles }) {
 
   return (
     <div className="article_container">
-      {/* <Search /> */}
-      {abstracts}
+      {noArticles ? <h2>No Articles Found...</h2> : abstracts}
     </div>
   )
 }
