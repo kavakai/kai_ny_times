@@ -5,7 +5,7 @@ import "./ArticleView.css"
 function ArticleView({ singleArticle }) {
   return (
     <section className="single_view">
-      <img src={singleArticle.multimedia && singleArticle.multimedia[1].url} />
+      <img src={singleArticle.multimedia && singleArticle.multimedia[1].url} alt={singleArticle.multimedia[1].caption} />
       <br/>
       <h2>{singleArticle.title && singleArticle.title}</h2>
       <h3>{singleArticle.byline && singleArticle.byline}</h3>
