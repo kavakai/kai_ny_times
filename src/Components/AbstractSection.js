@@ -17,11 +17,11 @@ function AbstractSection({ articles, showInfo, filteredArticles, noArticles }) {
     return <Abstract
       key={article.title}
       id={article.title}
-      title={article.title}
-      image={article.multimedia ? article.multimedia[2].url : null}
-      alt={article.multimedia ? article.multimedia[2].caption : article.title}
-      date={article.updated_date}
-      author={article.byline}
+      title={article.title && article.title}
+      image={article.multimedia && article.multimedia[2].url}
+      alt={article.multimedia && article.multimedia[2].caption}
+      date={article.updated_date && article.updated_date}
+      author={article.byline && article.byline} 
       showInfo={showInfo}
     />
   })
