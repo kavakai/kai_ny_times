@@ -2,7 +2,7 @@ html {
   background-color: #AAAAAA;
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 70em) {
   header {
     height: 130px;
     display: flex;
@@ -29,7 +29,7 @@ html {
   }
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 70em) {
   header {
     height: 90px;
     display: flex;
@@ -48,6 +48,28 @@ html {
   .secondary {
     margin-top: 8px;
     font-size: medium;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  header {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #FF5F5F;
+  }
+
+  .title {
+    text-shadow: #f9ead7 3px 4px 9px;
+    font-size: x-large;
+  }
+
+  .secondary {
+    margin-top: 8px;
+    font-size: small;
   }
 }
 
