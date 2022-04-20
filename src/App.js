@@ -6,6 +6,7 @@ import ArticleView from './Components/ArticleView';
 import "./css_reset.css";
 import "./App.css"
 import Search from './Components/Search';
+// require('dotenv').config()
 
 function App() {
   let navigate = useNavigate()
