@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Search.css"
 
-const Search = () => {
+const Search = ({ filterArticles }) => {
+
+  const [inputPhrase, setInputPhrase] = useState("")
+
+  const handleChange = (event) => {
+    event.preventDefault()
+    setInputPhrase(event.target.value)
+    filterArticles(inputPhrase)
+  }
+
   return (
     <form className="search-form">
-      <input className="search-input" type="text" placeholder="Enter Keyword"></input>
-      <button className="search-input" type="submit">Submit</button>
+      <div className="inputs">
+        <label className="search-label">Filter Titles by Keyword:</label>
+        <input
+          className="search-input"
+          name="search"
+          type="text"
+          placeholder="Enter Keyword"
+          value={inputPhrase}
+          onChange={(event) => handleChange(event)}
+        />
+      </div>
     </form>
   )
 }

@@ -3,9 +3,17 @@ import Search from "./Search";
 import Abstract from "./Abstract";
 import "./AbstractSection.css"
 
-function AbstractSection({ articles, showInfo }) {
+function AbstractSection({ articles, showInfo, filteredArticles, noArticles }) {
 
-  const abstracts = articles.map(article => {
+  let display
+
+  if (filteredArticles.length) {
+    display = filteredArticles
+  } else {
+    display = articles
+  }
+
+  const abstracts = display.map(article => {
     return <Abstract
       key={article.title}
       id={article.title}
@@ -21,8 +29,7 @@ function AbstractSection({ articles, showInfo }) {
 
   return (
     <div className="article_container">
-      {/* <Search /> */}
-      {abstracts}
+      {noArticles ? <h2>No Articles Found...</h2> : abstracts}
     </div>
   )
 }
