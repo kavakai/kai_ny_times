@@ -1,24 +1,83 @@
-.single_view {
-  margin: 0px 0px 32px 15vw;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  height: 70%;
-  border-radius: 25px;
-  align-items: center;
-  padding: 30px 20px 20px 20px;
-  background-color: blanchedalmond;
+@media screen and (min-width: 70em) {
+  .single_view {
+    margin: 0px 0px 32px 15vw;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    background-color: blanchedalmond;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #0412d8;
+    font-size: x-large;
+    border: solid black 3px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .link:hover {
+    transform: scale(1.2);
+  }
 }
 
-.link {
-  text-decoration: none;
-  color: #0412d8;
-  font-size: x-large;
-  border: solid black 3px;
-  margin: 5px;
-  border-radius: 10px;
+@media screen and (max-width: 70em) {
+  .single_view {
+    margin: 0px 0px 25px 12vw;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    background-color: blanchedalmond;
+    font-size: small;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #0412d8;
+    font-size: large;
+    border: solid black 3px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .link:hover {
+    transform: scale(1.2);
+  }
 }
 
-.link:hover {
-  transform: scale(1.2);
+@media screen and (max-width: 45em) {
+  .single_view {
+    margin: 0px 0px 25px 10vw;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    background-color: blanchedalmond;
+    font-size: small;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #0412d8;
+    font-size: medium;
+    border: solid black 3px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .link:hover {
+    transform: scale(1.2);
+  }
 }
+

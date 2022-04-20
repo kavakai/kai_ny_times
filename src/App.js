@@ -52,8 +52,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="header">
         <h1 className="title">Welcome To The Daily Drive</h1>
+        <p className="title secondary">A daily dose of the NY Times Automobile Section...</p>
       </header>
       {window.location.pathname === "/" && !errorMsg && <Search filterArticles={filterArticles}/>}
       <Routes>
