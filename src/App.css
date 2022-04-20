@@ -11,3 +11,8 @@ header {
 html {
   background-color: #AAAAAA;
 }
+
+.no-articles {
+  font-size: xx-large;
+  margin: 10% 39%;
+}

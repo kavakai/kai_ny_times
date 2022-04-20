@@ -44,7 +44,7 @@ function App() {
       </header>
       {window.location.pathname === "/" && <Search filterArticles={filterArticles}/>}
       <Routes>
-        <Route path="/" element={noArticles ? <h2>No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
+        <Route path="/" element={noArticles ? <h2 className="no-articles">No Articles Found...</h2> : <AbstractSection articles={articles} showInfo={showInfo} filteredArticles={filteredArticles} noArticles={noArticles}  />} />
         <Route path=":id" element={<ArticleView singleArticle={singleArticle}/>}/>
       </Routes>
     </div>
