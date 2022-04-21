@@ -11,7 +11,13 @@
 -  
 
 ## Instructions
-
+- copy the SSH clone address
+- run ```git clone [remote-address]``` in your terminal
+- ```cd``` into the project
+- run ```npm install``` in your terminal
+- run ```npm start``` in the Terminal 
+- if the app doesn't open in your browser
+  - open your browser and visit ![localhost](localhost:3000) 
 
 
 ## Screenshots
