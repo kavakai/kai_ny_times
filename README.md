@@ -17,7 +17,7 @@
 - run ```npm install``` in your terminal
 - run ```npm start``` in the Terminal 
 - if the app doesn't open in your browser
-  - open your browser and visit [localhost](localhost:3000) 
+  - open your browser and visit [localhost](http://localhost:3000) 
 
 
 ## Screenshots
