@@ -4,7 +4,7 @@
 
 - [Project Overview](#project-overview)
 - [Instructions for Use](#instructions)
-- [Screenshots](#sreenshots)
+- [Screenshots](#screenshots)
 - [Tech Stack](#technologies-used)
 - [Author/Links](#authorlinks)
 
