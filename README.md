@@ -25,12 +25,16 @@
 
 ## Screenshots
 
+Home Page View:
 ![Home Page](https://media.giphy.com/media/HMxRqaP7cyRLr1Xx4L/giphy.gif)
 
+Filtering Articles:
 ![Filtering Articles](https://media.giphy.com/media/L3kkUC11hwUO9lg9ls/giphy.gif)
 
+Single Arrticle View:
 ![Single Article View](https://media.giphy.com/media/tKdg6xp1vvByfVz0CZ/giphy.gif)
 
+Responsive Design:
 ![Responsive Design]()
 
 
