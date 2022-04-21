@@ -4,6 +4,7 @@
 
 - [Project Overview](#project-overview)
 - [Instructions for Use](#instructions)
+- [Screenshots](#sreenshots)
 - [Tech Stack](#technologies-used)
 - [Author/Links](#authorlinks)
 
@@ -50,4 +51,4 @@
 #### - AUTHOR:
 - Kai Kuller = [LinkedIn](www.linkedin.com/in/kai-kuller) || [GitHub](https://github.com/kavakai)
 
-## [BACK TO THE TOP!](#ryan-adams-albums)
+## [BACK TO THE TOP!](#daily-drive-news)
