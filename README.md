@@ -10,7 +10,7 @@
 
 ## ABSTRACT 
 
--  
+-  Daily Drive News is a mini-project built using React v18. It's purpose is to pull data from the New York Times automobile api to display the top automobile stories. This project was built in less than 8 hours. It is designed to be fully responsive and 100% accessible. Clone this repo down to your local machine and spin it up to take my app for a drive.  
 
 ## Instructions
 
@@ -36,10 +36,6 @@ Filtering Articles:
 Single Arrticle View:
 
 ![Single Article View](https://media.giphy.com/media/tKdg6xp1vvByfVz0CZ/giphy.gif)
-
-Responsive Design:
-
-![Responsive Design]()
 
 
 ## TECHNOLOGIES USED 
