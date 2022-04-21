@@ -3,6 +3,7 @@
 ## TABLE OF CONTENTS
 
 - [Project Overview](#project-overview)
+- [Instructions for Use](#instructions)
 - [Tech Stack](#technologies-used)
 - [Author/Links](#authorlinks)
 
