@@ -13,6 +13,7 @@
 -  
 
 ## Instructions
+
 - copy the SSH clone address
 - run ```git clone [remote-address]``` in your terminal
 - ```cd``` into the project
@@ -23,6 +24,14 @@
 
 
 ## Screenshots
+
+![Home Page](https://media.giphy.com/media/HMxRqaP7cyRLr1Xx4L/giphy.gif)
+
+![Filtering Articles](https://media.giphy.com/media/L3kkUC11hwUO9lg9ls/giphy.gif)
+
+![Single Article View](https://media.giphy.com/media/tKdg6xp1vvByfVz0CZ/giphy.gif)
+
+![Responsive Design]()
 
 
 ## TECHNOLOGIES USED 
